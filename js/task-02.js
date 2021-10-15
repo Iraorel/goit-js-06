@@ -7,5 +7,10 @@ const ingredients = [
   'Condiments',
 ];
 
-const ingredientsEl = document.createElement('li');
 console.log(ingredients);
+ingredients.forEach( liIngrediens =>{const element = document.createElement("li");
+console.log(element);
+element.textContent = liIngrediens;
+element.classList.add('item');
+})
+ 

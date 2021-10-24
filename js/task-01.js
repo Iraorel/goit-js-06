@@ -14,7 +14,6 @@ const  elementsEl = document.querySelectorAll('.item li');
 console.log('Elements', elementsEl);
 elementsEl.forEach(element => {console.log(elementsEl);});
 
-
 //listCategories.forEach(list =>{const listElements = list.children;
 
 

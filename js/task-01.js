@@ -14,17 +14,11 @@ classItem.forEach(classItem => {
     console.log(classItem.textContent);
 });
 const  elementsEl = document.querySelectorAll('.item li');
-console.log('Elements', elementsEl);
 
-elementsEl.forEach(element => 
-    {   console.log(elementsEl);});
+console.log(`Elements: ${elementsEl.length}`);
+console.log(elementsEl.firstChild);
 
-//allCategories.forEach(element=> {
-  //  firstElementChild.textContent;
-   // lastElementChild.children.length;
-//} )
 
-//listCategories.forEach(list =>{const listElements = list.children;
 
 
 

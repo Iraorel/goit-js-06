@@ -1,28 +1,26 @@
-const form = document.querySelector('login-form');
+const logForm = document.querySelector('login-form');
 const message = 'Invalid Email or Password! Try again plese.';
 
- const dataFormResult ={};
-    //const formData = new FormData(e.currentTarget);
-    //console.log(formData);
+logForm.addEventListener('submit', onFormSubmit);
 
-    formData.forEach((value, name) => {
-        console.log('onForSubmit -> name', name);
-        console.log('onFormSubmit -> value', value);
-    });
+function onFormSubmit(event) {
+    event.preventDefault();
 
-console.log(dataFormResult);
+    const formElements = event.currentTarget.elements;
+    if(email.value ==="" || password.value ===""){
+        return alert(message);
+    }
+    logForm.reset();
 
+    const formData = new FormData(event.currentTarget);
+    console.log(formData);
 
+ formData.forEach((value, name) => {
+    dataFormResult[name] = value;
+  });
 
-const onFormSubmit = function (change) {
-change.preventDefault();
-const { elements: {email, password}} = change.currentTarget;
+  console.log(dataFormResult);
 
-if (email.value === "" || password.value ===""){
-    return alert(message);
-   };
-console.log( `${emaile.name}: ${email.value}, ${password.name}: ${password.value}`);
- form.reset();
 }
 
-form.addEventListener('submit', onFormSubmit);
+
